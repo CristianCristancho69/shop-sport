@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#0b5ed7;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav ul{
+    list-style:none;
+    padding:0;
+}
+
+nav li{
+    display:inline;
+    margin:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.banner{
+    text-align:center;
+    padding:40px;
+    background:#198754;
+    color:white;
+}
+
+.productos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:30px;
+}
+
+.producto{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    width:250px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.producto img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+}
+
+button{
+    background:#198754;
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#146c43;
+}
+
+footer{
+    text-align:center;
+    background:#0b5ed7;
+    color:white;
+    padding:15px;
+}

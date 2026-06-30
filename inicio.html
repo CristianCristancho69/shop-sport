@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Deportiva</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>SPORTSHOP</h1>
+
+        <nav>
+            <a
+            href="inicio.html">inicio</a>
+            <a
+            href="productos.html">productos</a>
+            <a
+            href="carrito.html">carrito</a>
+            <a
+            href="login.html">ingresar</a>
+            <a
+            href="contato.html">contacto</a>
+            
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Bienvenido a la Tienda Deportiva</h2>
+        <p>Encuentra los mejores artículos deportivos al mejor precio.</p>
+    </section>
+
+    <main>
+
+        <h2>Productos Destacados</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="Imagenes de productos/balon.jpg" alt="Balón">
+                <h3>Balón de Fútbol</h3>
+                <p>$80.000</p>
+                <button onclick="agregarCarrito()">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="Imagenes de productos/camiseta.jpg" alt="Camiseta">
+                <h3>Camiseta Deportiva</h3>
+                <p>$60.000</p>
+                <button onclick="agregarCarrito()">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="Imagenes de productos/guayos.jpg" alt="Guayos">
+                <h3>Guayos Profesionales</h3>
+                <p>$180.000</p>
+                <button onclick="agregarCarrito()">Agregar al carrito</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Tienda Deportiva SPORTSHOP</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
