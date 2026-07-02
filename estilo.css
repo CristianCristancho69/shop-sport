@@ -1,76 +1,1310 @@
+/*====================================================
+            SHOP SPORTS
+            HOJA DE ESTILOS GENERAL
+====================================================*/
+
+
+
+/*====================================================
+                ESTILOS GENERALES
+====================================================*/
+
 body{
     font-family: Arial, sans-serif;
     margin:0;
     background:#f4f4f4;
 }
 
+a{
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+}
+
+
+
+/*====================================================
+                    LOGIN
+====================================================*/
+
+.login{
+    width:420px;
+    margin:50px auto;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    width:140px;
+    margin-bottom:15px;
+}
+
+.login h1{
+    color:#198754;
+    margin-bottom:5px;
+}
+
+.login h2{
+    margin-bottom:25px;
+}
+
+.login label{
+    display:block;
+    text-align:left;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.login input{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+.olvide{
+    display:block;
+    text-align:right;
+    margin-top:10px;
+    color:#ff7b00;
+    font-size:14px;
+}
+
+.ingresar{
+
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+
+    background:#198754;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:17px;
+}
+
+.registrarse{
+
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+
+    background:#ffc107;
+    color:black;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:17px;
+}
+
+.ingresar:hover{
+
+    background:#146c43;
+
+}
+
+.registrarse:hover{
+
+    background:#e0a800;
+
+}
+
+
+
+/*====================================================
+                    INICIO
+====================================================*/
+
 header{
+
     background:#0b5ed7;
     color:white;
     padding:20px;
     text-align:center;
+
 }
 
 nav ul{
+
     list-style:none;
     padding:0;
+    margin:0;
+
 }
 
 nav li{
+
     display:inline;
     margin:15px;
+
 }
 
 nav a{
+
     color:white;
     text-decoration:none;
+    font-weight:bold;
+
+}
+
+nav a:hover{
+
+    color:#ffc107;
+
 }
 
 .banner{
+
     text-align:center;
     padding:40px;
     background:#198754;
     color:white;
+
+}
+
+.busqueda{
+
+    text-align:center;
+    margin:30px;
+
+}
+
+.busqueda input{
+
+    width:45%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+
+}
+
+.busqueda button{
+
+    padding:10px 20px;
+    background:#198754;
+    color:white;
+    border:none;
+    border-radius:8px;
+
+}
+
+.busqueda button:hover{
+
+    background:#146c43;
+
+}
+
+.categorias{
+
+    text-align:center;
+    margin-top:30px;
+
+}
+
+.categoria{
+
+    display:inline-block;
+    background:#0b5ed7;
+    color:white;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:10px;
+    font-weight:bold;
+
 }
 
 .productos{
+
     display:flex;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
     padding:30px;
+
 }
 
 .producto{
+
     background:white;
     padding:15px;
     border-radius:10px;
     width:250px;
     text-align:center;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
+
 }
 
 .producto img{
+
     width:200px;
     height:200px;
     object-fit:cover;
+
 }
 
-button{
+.producto button{
+
     background:#198754;
     color:white;
     border:none;
     padding:10px;
-    cursor:pointer;
+    border-radius:6px;
+
 }
 
-button:hover{
+.producto button:hover{
+
     background:#146c43;
+
 }
 
 footer{
+
     text-align:center;
     background:#0b5ed7;
     color:white;
     padding:15px;
+
+}
+
+
+
+/*====================================================
+                REGISTRO
+====================================================*/
+
+.registro{
+
+    width:500px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0px 0px 15px rgba(0,0,0,.2);
+
+    text-align:center;
+
+}
+
+.registro h1{
+
+    color:#198754;
+
+}
+
+.registro h2{
+
+    margin-bottom:20px;
+
+}
+
+.registro label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:12px;
+
+    font-weight:bold;
+
+}
+
+.registro input,
+.registro select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+.btnRegistro{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnRegistro:hover{
+
+    background:#146c43;
+
+}
+
+.volver{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.volver:hover{
+
+    background:#084298;
+
+}
+
+
+
+/*====================================================
+            RECUPERAR CONTRASEÑA
+====================================================*/
+
+.recuperar{
+
+    width:450px;
+
+    margin:60px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.recuperar h1{
+
+    color:#198754;
+
+}
+
+.recuperar h2{
+
+    margin-bottom:20px;
+
+}
+
+.mensaje{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+.recuperar label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.recuperar input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+.btnEnviar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnEnviar:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                PERFIL DE USUARIO
+====================================================*/
+
+.perfil{
+
+    width:600px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+.perfil h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:20px;
+
+}
+
+.fotoPerfil{
+
+    width:140px;
+
+    display:block;
+
+    margin:20px auto;
+
+}
+
+.perfil label{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.perfil input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+.btnActualizar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:14px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnActualizar:hover{
+
+    background:#146c43;
+
+}
+
+
+/*====================================================
+                productos
+====================================================*/
+
+.titulo-catalogo{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.catalogo{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:30px;
+
+}
+
+.catalogo .producto{
+
+    width:260px;
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+.catalogo .producto img{
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+.catalogo .producto h3{
+
+    margin-top:15px;
+
+}
+
+.catalogo .producto p{
+
+    color:#198754;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.catalogo .producto button{
+
+    width:100%;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#198754;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.catalogo .producto button:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                CARRITO
+====================================================*/
+
+.carrito{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+.carrito h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.carrito table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.carrito th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.carrito td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.botones-carrito{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.vaciar{
+
+    background:#dc3545;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+}
+
+.vaciar:hover{
+
+    background:#bb2d3b;
+
+}
+
+.comprar{
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+}
+
+.comprar:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                PAGO
+====================================================*/
+
+.pago{
+
+    width:600px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+}
+
+.pago h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:25px;
+
+}
+
+.pago label{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.pago input,
+.pago select,
+.pago textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    box-sizing:border-box;
+
+}
+
+.pago textarea{
+
+    resize:vertical;
+
+}
+
+.btnPagar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:14px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnPagar:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                PANEL DEL VENDEDOR
+====================================================*/
+
+.panel-vendedor{
+
+    width:90%;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.panel-vendedor h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.opciones-vendedor{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.opcion{
+
+    width:260px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.opcion h3{
+
+    color:#0b5ed7;
+
+}
+
+.opcion p{
+
+    min-height:60px;
+
+}
+
+.opcion button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.opcion button:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                INVENTARIO
+====================================================*/
+
+.inventario{
+
+    width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.inventario h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.inventario table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.inventario th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.inventario td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.agregarProducto{
+
+    margin-top:25px;
+
+    width:100%;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.agregarProducto:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                    PEDIDOS
+====================================================*/
+
+.pedidos{
+
+    width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.pedidos h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.pedidos table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.pedidos th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.pedidos td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.actualizarEstado{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.actualizarEstado:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                HISTORIAL DE VENTAS
+====================================================*/
+
+.historial{
+
+    width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.historial h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.historial table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.historial th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.historial td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.btnReporte{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.btnReporte:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+            PANEL DEL ADMINISTRADOR
+====================================================*/
+
+.administrador{
+
+    width:90%;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.administrador h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.panel-admin{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.card-admin{
+
+    width:260px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.card-admin h3{
+
+    color:#0b5ed7;
+
+}
+
+.card-admin p{
+
+    min-height:60px;
+
+}
+
+.card-admin button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.card-admin button:hover{
+
+    background:#146c43;
+
 }
