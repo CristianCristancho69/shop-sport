@@ -1,0 +1,1701 @@
+/*====================================================
+            SHOP SPORTS
+            HOJA DE ESTILOS GENERAL
+====================================================*/
+
+
+
+/*====================================================
+                ESTILOS GENERALES
+====================================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+button{
+
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+input,
+select,
+textarea{
+
+    transition:0.3s;
+    font-family:inherit;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+    border-color:#198754;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+
+/*====================================================
+                    LOGIN
+====================================================*/
+
+.login{
+
+    width:420px;
+    max-width:95%;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.logo{
+
+    width:140px;
+
+    margin:0 auto 15px;
+
+}
+
+.login h1{
+
+    color:#198754;
+
+    margin-bottom:5px;
+
+}
+
+.login h2{
+
+    margin-bottom:25px;
+
+    color:#333;
+
+}
+
+.login label{
+
+    display:block;
+
+    text-align:left;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+.login input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.login input:focus{
+
+    border-color:#198754;
+
+}
+
+.olvide{
+
+    display:block;
+
+    text-align:right;
+
+    margin-top:10px;
+
+    color:#ff7b00;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.olvide:hover{
+
+    color:#cc6500;
+
+}
+
+.ingresar{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.ingresar:hover{
+
+    background:#146c43;
+
+}
+
+.registrarse{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#ffc107;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.registrarse:hover{
+
+    background:#e0a800;
+
+}
+
+
+
+
+/*====================================================
+            HEADER - MENÚ - INICIO
+====================================================*/
+
+header{
+
+    background:#0b5ed7;
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+
+}
+
+header h1{
+
+    margin-bottom:15px;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+nav li{
+
+    display:inline-block;
+
+}
+
+nav a{
+
+    color:white;
+
+    font-weight:bold;
+
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    background:#084298;
+
+    color:#ffc107;
+
+}
+
+/*====================================================
+                    BANNER
+====================================================*/
+
+.banner{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background:#198754;
+
+    color:white;
+
+}
+
+.banner h2{
+
+    margin-bottom:15px;
+
+    font-size:32px;
+
+}
+
+.banner p{
+
+    font-size:18px;
+
+}
+
+/*====================================================
+                BÚSQUEDA
+====================================================*/
+
+.busqueda{
+
+    text-align:center;
+
+    margin:35px 20px;
+
+}
+
+.busqueda input{
+
+    width:50%;
+
+    max-width:500px;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.busqueda button{
+
+    padding:12px 20px;
+
+    margin-left:10px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+.busqueda button:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                CATEGORÍAS
+====================================================*/
+
+.categorias{
+
+    text-align:center;
+
+    margin:40px 20px;
+
+}
+
+.categoria{
+
+    display:inline-block;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:15px 25px;
+
+    margin:10px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.categoria:hover{
+
+    background:#084298;
+
+    transform:translateY(-3px);
+
+}
+
+/*====================================================
+                PRODUCTOS
+====================================================*/
+
+.productos{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:40px 20px;
+
+}
+
+.producto{
+
+    width:250px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.producto img{
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    margin:auto;
+
+}
+
+.producto h3{
+
+    margin:15px 0 10px;
+
+}
+
+.producto p{
+
+    color:#198754;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+.producto button{
+
+    width:100%;
+
+    padding:10px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+.producto button:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                    FOOTER
+====================================================*/
+
+footer{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+
+    margin-top:40px;
+
+}
+
+
+
+/*====================================================
+                REGISTRO
+====================================================*/
+
+
+.registro{
+
+    width:500px;
+    max-width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+    text-align:center;
+
+}
+
+.registro h1{
+
+    color:#198754;
+
+    margin-bottom:5px;
+
+}
+
+.registro h2{
+
+    color:#333;
+
+    margin-bottom:25px;
+
+}
+
+.registro label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.registro input,
+.registro select{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.registro input:focus,
+.registro select:focus{
+
+    border-color:#198754;
+
+}
+
+.btnRegistro{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnRegistro:hover{
+
+    background:#146c43;
+
+}
+
+.volver{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.volver:hover{
+
+    background:#084298;
+
+}
+
+/*====================================================
+            RECUPERAR CONTRASEÑA
+====================================================*/
+
+.recuperar{
+
+    width:450px;
+    max-width:95%;
+
+    margin:60px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.recuperar h1{
+
+    color:#198754;
+
+    margin-bottom:5px;
+
+}
+
+.recuperar h2{
+
+    color:#333;
+
+    margin-bottom:20px;
+
+}
+
+.mensaje{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+    line-height:1.5;
+
+}
+
+.recuperar label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.recuperar input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.recuperar input:focus{
+
+    border-color:#198754;
+
+}
+
+.btnEnviar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnEnviar:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                PERFIL DE USUARIO
+====================================================*/
+
+.perfil{
+
+    width:600px;
+    max-width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.perfil h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:25px;
+
+}
+
+.fotoPerfil{
+
+    width:140px;
+
+    height:140px;
+
+    object-fit:cover;
+
+    display:block;
+
+    margin:20px auto;
+
+    border-radius:50%;
+
+    border:4px solid #198754;
+
+}
+
+.perfil label{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.perfil input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.perfil input:focus{
+
+    border-color:#198754;
+
+}
+
+.btnActualizar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:14px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnActualizar:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                CATÁLOGO DE PRODUCTOS
+====================================================*/
+
+.titulo-catalogo{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.titulo-catalogo h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.titulo-catalogo p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+.catalogo{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    padding:20px 30px 40px;
+
+}
+
+.catalogo .producto{
+
+    width:260px;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 0 12px rgba(0,0,0,.15);
+
+    transition:0.3s;
+
+}
+
+.catalogo .producto:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 22px rgba(0,0,0,.20);
+
+}
+
+.catalogo .producto img{
+
+    width:200px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border-radius:10px;
+
+}
+
+.catalogo .producto h3{
+
+    margin:15px 0 10px;
+
+    color:#333;
+
+}
+
+.catalogo .producto p{
+
+    color:#198754;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+}
+
+.catalogo .producto button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#198754;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.catalogo .producto button:hover{
+
+    background:#146c43;
+
+}
+
+
+
+/*====================================================
+                CARRITO
+====================================================*/
+
+.carrito{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.carrito h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.carrito table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+}
+
+.carrito th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.carrito td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.carrito tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.botones-carrito{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.vaciar{
+
+    flex:1;
+
+    background:#dc3545;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.vaciar:hover{
+
+    background:#bb2d3b;
+
+}
+
+.comprar{
+
+    flex:1;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.comprar:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                PAGO
+====================================================*/
+
+.pago{
+
+    width:600px;
+    max-width:95%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.pago h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:25px;
+
+}
+
+.pago label{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+.pago input,
+.pago select,
+.pago textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+}
+
+.pago input:focus,
+.pago select:focus,
+.pago textarea:focus{
+
+    border-color:#198754;
+
+    outline:none;
+
+}
+
+.pago textarea{
+
+    resize:vertical;
+
+    min-height:100px;
+
+}
+
+.btnPagar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:14px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+}
+
+.btnPagar:hover{
+
+    background:#146c43;
+
+}
+
+
+/*====================================================
+                PANEL DEL VENDEDOR
+====================================================*/
+
+.panel-vendedor{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.panel-vendedor h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.panel-vendedor p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+.opciones-vendedor{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.opcion{
+
+    width:260px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+.opcion:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.2);
+
+}
+
+.opcion h3{
+
+    color:#0b5ed7;
+
+    margin-bottom:15px;
+
+}
+
+.opcion p{
+
+    min-height:60px;
+
+    color:#555;
+
+    line-height:1.5;
+
+}
+
+.opcion button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.opcion button:hover{
+
+    background:#146c43;
+
+}
+
+
+/*====================================================
+                INVENTARIO
+====================================================*/
+
+.inventario{
+
+    width:95%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.inventario h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.inventario table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+}
+
+.inventario th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.inventario td{
+
+    border:1px solid #ddd;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+.inventario tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.agregarProducto{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.agregarProducto:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                    PEDIDOS
+====================================================*/
+
+.pedidos{
+
+    width:95%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.pedidos h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.pedidos table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+}
+
+.pedidos th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.pedidos td{
+
+    border:1px solid #ddd;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+.pedidos tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.actualizarEstado{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.actualizarEstado:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+                HISTORIAL DE VENTAS
+====================================================*/
+
+.historial{
+
+    width:95%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+
+}
+
+.historial h2{
+
+    text-align:center;
+
+    color:#198754;
+
+    margin-bottom:30px;
+
+}
+
+.historial table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+}
+
+.historial th{
+
+    background:#0b5ed7;
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.historial td{
+
+    border:1px solid #ddd;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+.historial tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.btnReporte{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+}
+
+.btnReporte:hover{
+
+    background:#146c43;
+
+}
+
+/*====================================================
+            PANEL DEL ADMINISTRADOR
+====================================================*/
+
+.administrador{
+
+    width:90%;
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.administrador h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.panel-admin{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.card-admin{
+
+    width:260px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+}
+
+.card-admin h3{
+
+    color:#0b5ed7;
+
+}
+
+.card-admin p{
+
+    min-height:60px;
+
+}
+
+.card-admin button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.card-admin button:hover{
+
+    background:#146c43;
+
+}

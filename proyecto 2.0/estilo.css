@@ -8,21 +8,59 @@
 /*====================================================
                 ESTILOS GENERALES
 ====================================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
+
+    font-family:Arial, sans-serif;
     background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+
 }
 
 a{
+
     text-decoration:none;
+    color:inherit;
+
 }
 
 button{
+
     cursor:pointer;
+    transition:0.3s;
+
 }
 
+input,
+select,
+textarea{
+
+    transition:0.3s;
+    font-family:inherit;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+    border-color:#198754;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
 
 
 /*====================================================
@@ -30,86 +68,145 @@ button{
 ====================================================*/
 
 .login{
+
     width:420px;
+    max-width:95%;
+
     margin:50px auto;
+
     background:white;
-    border-radius:15px;
+
     padding:30px;
+
+    border-radius:15px;
+
     text-align:center;
+
     box-shadow:0 0 15px rgba(0,0,0,.2);
+
 }
 
 .logo{
+
     width:140px;
-    margin-bottom:15px;
+
+    margin:0 auto 15px;
+
 }
 
 .login h1{
+
     color:#198754;
+
     margin-bottom:5px;
+
 }
 
 .login h2{
+
     margin-bottom:25px;
+
+    color:#333;
+
 }
 
 .login label{
+
     display:block;
+
     text-align:left;
+
     font-weight:bold;
+
     margin-top:15px;
+
 }
 
 .login input{
+
     width:100%;
+
     padding:12px;
+
     margin-top:5px;
+
     border:1px solid #ccc;
+
     border-radius:8px;
-    box-sizing:border-box;
+
+}
+
+.login input:focus{
+
+    border-color:#198754;
+
 }
 
 .olvide{
+
     display:block;
+
     text-align:right;
+
     margin-top:10px;
+
     color:#ff7b00;
+
     font-size:14px;
+
+    transition:.3s;
+
+}
+
+.olvide:hover{
+
+    color:#cc6500;
+
 }
 
 .ingresar{
 
     width:100%;
+
     margin-top:20px;
+
     padding:12px;
 
     background:#198754;
+
     color:white;
 
     border:none;
+
     border-radius:8px;
 
     font-size:17px;
-}
 
-.registrarse{
-
-    width:100%;
-    margin-top:15px;
-    padding:12px;
-
-    background:#ffc107;
-    color:black;
-
-    border:none;
-    border-radius:8px;
-
-    font-size:17px;
 }
 
 .ingresar:hover{
 
     background:#146c43;
+
+}
+
+.registrarse{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#ffc107;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:17px;
 
 }
 
@@ -121,79 +218,144 @@ button{
 
 
 
+
 /*====================================================
-                    INICIO
+            HEADER - MENÚ - INICIO
 ====================================================*/
 
 header{
 
     background:#0b5ed7;
     color:white;
+
     padding:20px;
+
     text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+
+}
+
+header h1{
+
+    margin-bottom:15px;
 
 }
 
 nav ul{
 
     list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
     padding:0;
+
     margin:0;
 
 }
 
 nav li{
 
-    display:inline;
-    margin:15px;
+    display:inline-block;
 
 }
 
 nav a{
 
     color:white;
-    text-decoration:none;
+
     font-weight:bold;
+
+    padding:8px 12px;
+
+    border-radius:6px;
+
+    transition:.3s;
 
 }
 
 nav a:hover{
 
+    background:#084298;
+
     color:#ffc107;
 
 }
 
+/*====================================================
+                    BANNER
+====================================================*/
+
 .banner{
 
     text-align:center;
-    padding:40px;
+
+    padding:50px 20px;
+
     background:#198754;
+
     color:white;
 
 }
 
+.banner h2{
+
+    margin-bottom:15px;
+
+    font-size:32px;
+
+}
+
+.banner p{
+
+    font-size:18px;
+
+}
+
+/*====================================================
+                BÚSQUEDA
+====================================================*/
+
 .busqueda{
 
     text-align:center;
-    margin:30px;
+
+    margin:35px 20px;
 
 }
 
 .busqueda input{
 
-    width:45%;
-    padding:10px;
+    width:50%;
+
+    max-width:500px;
+
+    padding:12px;
+
     border:1px solid #ccc;
+
     border-radius:8px;
 
 }
 
 .busqueda button{
 
-    padding:10px 20px;
+    padding:12px 20px;
+
+    margin-left:10px;
+
     background:#198754;
+
     color:white;
+
     border:none;
+
     border-radius:8px;
 
 }
@@ -204,61 +366,133 @@ nav a:hover{
 
 }
 
+/*====================================================
+                CATEGORÍAS
+====================================================*/
+
 .categorias{
 
     text-align:center;
-    margin-top:30px;
+
+    margin:40px 20px;
 
 }
 
 .categoria{
 
     display:inline-block;
+
     background:#0b5ed7;
+
     color:white;
+
     padding:15px 25px;
+
     margin:10px;
+
     border-radius:10px;
+
     font-weight:bold;
 
+    transition:.3s;
+
 }
+
+.categoria:hover{
+
+    background:#084298;
+
+    transform:translateY(-3px);
+
+}
+
+/*====================================================
+                PRODUCTOS
+====================================================*/
 
 .productos{
 
     display:flex;
+
     justify-content:center;
-    gap:20px;
+
     flex-wrap:wrap;
-    padding:30px;
+
+    gap:25px;
+
+    padding:40px 20px;
 
 }
 
 .producto{
 
-    background:white;
-    padding:15px;
-    border-radius:10px;
     width:250px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
     text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+    transition:.3s;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
 
 }
 
 .producto img{
 
     width:200px;
+
     height:200px;
+
     object-fit:cover;
+
+    margin:auto;
+
+}
+
+.producto h3{
+
+    margin:15px 0 10px;
+
+}
+
+.producto p{
+
+    color:#198754;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    margin-bottom:15px;
 
 }
 
 .producto button{
 
-    background:#198754;
-    color:white;
-    border:none;
+    width:100%;
+
     padding:10px;
-    border-radius:6px;
+
+    background:#198754;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
 
 }
 
@@ -268,12 +502,21 @@ nav a:hover{
 
 }
 
+/*====================================================
+                    FOOTER
+====================================================*/
+
 footer{
 
-    text-align:center;
     background:#0b5ed7;
+
     color:white;
-    padding:15px;
+
+    text-align:center;
+
+    padding:18px;
+
+    margin-top:40px;
 
 }
 
@@ -283,9 +526,11 @@ footer{
                 REGISTRO
 ====================================================*/
 
+
 .registro{
 
     width:500px;
+    max-width:95%;
 
     margin:40px auto;
 
@@ -295,7 +540,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0px 0px 15px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
     text-align:center;
 
@@ -305,11 +550,15 @@ footer{
 
     color:#198754;
 
+    margin-bottom:5px;
+
 }
 
 .registro h2{
 
-    margin-bottom:20px;
+    color:#333;
+
+    margin-bottom:25px;
 
 }
 
@@ -319,7 +568,7 @@ footer{
 
     text-align:left;
 
-    margin-top:12px;
+    margin-top:15px;
 
     font-weight:bold;
 
@@ -338,7 +587,12 @@ footer{
 
     border-radius:8px;
 
-    box-sizing:border-box;
+}
+
+.registro input:focus,
+.registro select:focus{
+
+    border-color:#198754;
 
 }
 
@@ -394,8 +648,6 @@ footer{
 
 }
 
-
-
 /*====================================================
             RECUPERAR CONTRASEÑA
 ====================================================*/
@@ -403,6 +655,7 @@ footer{
 .recuperar{
 
     width:450px;
+    max-width:95%;
 
     margin:60px auto;
 
@@ -422,9 +675,13 @@ footer{
 
     color:#198754;
 
+    margin-bottom:5px;
+
 }
 
 .recuperar h2{
+
+    color:#333;
 
     margin-bottom:20px;
 
@@ -432,9 +689,11 @@ footer{
 
 .mensaje{
 
-    color:#555;
+    color:#666;
 
     margin-bottom:20px;
+
+    line-height:1.5;
 
 }
 
@@ -462,7 +721,11 @@ footer{
 
     border-radius:8px;
 
-    box-sizing:border-box;
+}
+
+.recuperar input:focus{
+
+    border-color:#198754;
 
 }
 
@@ -501,6 +764,7 @@ footer{
 .perfil{
 
     width:600px;
+    max-width:95%;
 
     margin:40px auto;
 
@@ -510,7 +774,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
@@ -520,7 +784,7 @@ footer{
 
     color:#198754;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
@@ -528,9 +792,17 @@ footer{
 
     width:140px;
 
+    height:140px;
+
+    object-fit:cover;
+
     display:block;
 
     margin:20px auto;
+
+    border-radius:50%;
+
+    border:4px solid #198754;
 
 }
 
@@ -556,7 +828,11 @@ footer{
 
     border-radius:8px;
 
-    box-sizing:border-box;
+}
+
+.perfil input:focus{
+
+    border-color:#198754;
 
 }
 
@@ -587,15 +863,32 @@ footer{
 }
 
 
+
 /*====================================================
-                productos
+                CATÁLOGO DE PRODUCTOS
 ====================================================*/
 
 .titulo-catalogo{
 
     text-align:center;
 
-    padding:30px;
+    padding:40px 20px;
+
+}
+
+.titulo-catalogo h2{
+
+    color:#198754;
+
+    margin-bottom:10px;
+
+}
+
+.titulo-catalogo p{
+
+    color:#666;
+
+    font-size:17px;
 
 }
 
@@ -603,13 +896,13 @@ footer{
 
     display:flex;
 
-    flex-wrap:wrap;
-
     justify-content:center;
 
-    gap:25px;
+    flex-wrap:wrap;
 
-    padding:30px;
+    gap:30px;
+
+    padding:20px 30px 40px;
 
 }
 
@@ -619,13 +912,23 @@ footer{
 
     background:white;
 
-    border-radius:10px;
+    border-radius:12px;
 
-    padding:15px;
+    padding:20px;
 
     text-align:center;
 
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    box-shadow:0 0 12px rgba(0,0,0,.15);
+
+    transition:0.3s;
+
+}
+
+.catalogo .producto:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 22px rgba(0,0,0,.20);
 
 }
 
@@ -637,13 +940,17 @@ footer{
 
     object-fit:cover;
 
-    border-radius:8px;
+    margin:auto;
+
+    border-radius:10px;
 
 }
 
 .catalogo .producto h3{
 
-    margin-top:15px;
+    margin:15px 0 10px;
+
+    color:#333;
 
 }
 
@@ -651,9 +958,11 @@ footer{
 
     color:#198754;
 
-    font-size:20px;
+    font-size:22px;
 
     font-weight:bold;
+
+    margin-bottom:15px;
 
 }
 
@@ -661,7 +970,7 @@ footer{
 
     width:100%;
 
-    padding:10px;
+    padding:12px;
 
     border:none;
 
@@ -690,6 +999,7 @@ footer{
 .carrito{
 
     width:90%;
+    max-width:1100px;
 
     margin:40px auto;
 
@@ -699,13 +1009,15 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
 .carrito h2{
 
     text-align:center;
+
+    color:#198754;
 
     margin-bottom:30px;
 
@@ -717,6 +1029,8 @@ footer{
 
     border-collapse:collapse;
 
+    overflow:hidden;
+
 }
 
 .carrito th{
@@ -725,17 +1039,23 @@ footer{
 
     color:white;
 
-    padding:12px;
+    padding:14px;
 
 }
 
 .carrito td{
 
-    padding:12px;
+    padding:14px;
 
     text-align:center;
 
     border-bottom:1px solid #ddd;
+
+}
+
+.carrito tr:hover{
+
+    background:#f8f9fa;
 
 }
 
@@ -747,9 +1067,15 @@ footer{
 
     justify-content:space-between;
 
+    gap:15px;
+
+    flex-wrap:wrap;
+
 }
 
 .vaciar{
+
+    flex:1;
 
     background:#dc3545;
 
@@ -757,9 +1083,11 @@ footer{
 
     border:none;
 
-    padding:12px 25px;
+    padding:14px;
 
     border-radius:8px;
+
+    font-size:16px;
 
 }
 
@@ -771,15 +1099,19 @@ footer{
 
 .comprar{
 
+    flex:1;
+
     background:#198754;
 
     color:white;
 
     border:none;
 
-    padding:12px 25px;
+    padding:14px;
 
     border-radius:8px;
+
+    font-size:16px;
 
 }
 
@@ -789,8 +1121,6 @@ footer{
 
 }
 
-
-
 /*====================================================
                 PAGO
 ====================================================*/
@@ -798,6 +1128,7 @@ footer{
 .pago{
 
     width:600px;
+    max-width:95%;
 
     margin:40px auto;
 
@@ -807,7 +1138,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
@@ -845,13 +1176,23 @@ footer{
 
     border-radius:8px;
 
-    box-sizing:border-box;
+}
+
+.pago input:focus,
+.pago select:focus,
+.pago textarea:focus{
+
+    border-color:#198754;
+
+    outline:none;
 
 }
 
 .pago textarea{
 
     resize:vertical;
+
+    min-height:100px;
 
 }
 
@@ -882,7 +1223,6 @@ footer{
 }
 
 
-
 /*====================================================
                 PANEL DEL VENDEDOR
 ====================================================*/
@@ -890,6 +1230,7 @@ footer{
 .panel-vendedor{
 
     width:90%;
+    max-width:1200px;
 
     margin:40px auto;
 
@@ -902,6 +1243,14 @@ footer{
     color:#198754;
 
     margin-bottom:10px;
+
+}
+
+.panel-vendedor p{
+
+    color:#666;
+
+    font-size:17px;
 
 }
 
@@ -931,17 +1280,33 @@ footer{
 
     box-shadow:0 0 12px rgba(0,0,0,.2);
 
+    transition:.3s;
+
+}
+
+.opcion:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.2);
+
 }
 
 .opcion h3{
 
     color:#0b5ed7;
 
+    margin-bottom:15px;
+
 }
 
 .opcion p{
 
     min-height:60px;
+
+    color:#555;
+
+    line-height:1.5;
 
 }
 
@@ -970,7 +1335,6 @@ footer{
 }
 
 
-
 /*====================================================
                 INVENTARIO
 ====================================================*/
@@ -978,6 +1342,7 @@ footer{
 .inventario{
 
     width:95%;
+    max-width:1200px;
 
     margin:40px auto;
 
@@ -987,7 +1352,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 12px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
@@ -1007,6 +1372,8 @@ footer{
 
     border-collapse:collapse;
 
+    overflow:hidden;
+
 }
 
 .inventario th{
@@ -1015,7 +1382,7 @@ footer{
 
     color:white;
 
-    padding:12px;
+    padding:14px;
 
 }
 
@@ -1023,17 +1390,23 @@ footer{
 
     border:1px solid #ddd;
 
-    padding:12px;
+    padding:14px;
 
     text-align:center;
 
 }
 
+.inventario tr:hover{
+
+    background:#f8f9fa;
+
+}
+
 .agregarProducto{
 
-    margin-top:25px;
-
     width:100%;
+
+    margin-top:25px;
 
     padding:15px;
 
@@ -1062,6 +1435,7 @@ footer{
 .pedidos{
 
     width:95%;
+    max-width:1200px;
 
     margin:40px auto;
 
@@ -1071,7 +1445,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 12px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
@@ -1091,6 +1465,8 @@ footer{
 
     border-collapse:collapse;
 
+    overflow:hidden;
+
 }
 
 .pedidos th{
@@ -1099,7 +1475,7 @@ footer{
 
     color:white;
 
-    padding:12px;
+    padding:14px;
 
 }
 
@@ -1107,9 +1483,15 @@ footer{
 
     border:1px solid #ddd;
 
-    padding:12px;
+    padding:14px;
 
     text-align:center;
+
+}
+
+.pedidos tr:hover{
+
+    background:#f8f9fa;
 
 }
 
@@ -1146,6 +1528,7 @@ footer{
 .historial{
 
     width:95%;
+    max-width:1200px;
 
     margin:40px auto;
 
@@ -1155,7 +1538,7 @@ footer{
 
     border-radius:15px;
 
-    box-shadow:0 0 12px rgba(0,0,0,.2);
+    box-shadow:0 0 15px rgba(0,0,0,.2);
 
 }
 
@@ -1175,6 +1558,8 @@ footer{
 
     border-collapse:collapse;
 
+    overflow:hidden;
+
 }
 
 .historial th{
@@ -1183,7 +1568,7 @@ footer{
 
     color:white;
 
-    padding:12px;
+    padding:14px;
 
 }
 
@@ -1191,9 +1576,15 @@ footer{
 
     border:1px solid #ddd;
 
-    padding:12px;
+    padding:14px;
 
     text-align:center;
+
+}
+
+.historial tr:hover{
+
+    background:#f8f9fa;
 
 }
 

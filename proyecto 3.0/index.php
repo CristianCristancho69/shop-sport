@@ -1,0 +1,1004 @@
+<?php
+session_start();
+
+$usuarioLogueado = isset($_SESSION['usuario']);
+
+$nombreUsuario = $usuarioLogueado
+    ? $_SESSION['nombre']
+    : "";
+
+$tipoUsuario = $usuarioLogueado
+    ? $_SESSION['tipo_usuario']
+    : "";
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Sports</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+<?php if ($usuarioLogueado): ?>
+
+    <div class="usuario-sesion">
+
+        <h3>
+            Bienvenido,
+            <?php echo htmlspecialchars($nombreUsuario); ?>
+        </h3>
+
+        <p>
+            Tipo de usuario:
+            <?php echo htmlspecialchars($tipoUsuario); ?>
+        </p>
+
+        <a href="cerrarSesion.php">
+            <button type="button">
+                Cerrar sesión
+            </button>
+        </a>
+
+    </div>
+
+<?php endif; ?>
+
+
+<!-- ==================================================
+                    LOGIN
+=================================================== -->
+
+
+<img src="img/logo.png" class="logo" alt="Logo Shop Sports">
+
+<h1>Shop Sports</h1>
+
+<h2>Iniciar Sesión</h2>
+
+<form action="login.php" method="POST">
+
+    <label for="usuario">Nombre de usuario</label>
+    <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Ingrese su usuario"
+        required>
+
+    <label for="password">Contraseña</label>
+    <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Ingrese su contraseña"
+        required>
+
+    <a
+        href="#"
+        class="olvide"
+        onclick="mostrarSeccion('recuperar')">
+        ¿Olvidó su contraseña?
+    </a>
+
+    <button
+        type="submit"
+        class="ingresar">
+        Ingresar
+    </button>
+
+</form>
+
+<button
+    type="button"
+    class="registrarse"
+    onclick="mostrarSeccion('registro')">
+    Registrarse
+</button>
+
+
+
+
+
+<!-- ==================================================
+                REGISTRO
+=================================================== -->
+
+<section id="registro" style="display:none;">
+
+<div class="registro">
+
+    <img src="img/logo.png" class="logo">
+
+    <h1>Shop Sports</h1>
+
+    <h2>Registro de Usuario</h2>
+```html
+<h2>Registro de Usuario</h2>
+
+<form action="registro.php" method="POST">
+
+    <label for="nombre">Nombre</label>
+    <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingrese su nombre"
+        required>
+
+    <label for="apellido">Apellido</label>
+    <input
+        type="text"
+        id="apellido"
+        name="apellido"
+        placeholder="Ingrese su apellido"
+        required>
+
+    <label for="correo">Correo electrónico</label>
+    <input
+        type="email"
+        id="correo"
+        name="correo"
+        placeholder="Ingrese su correo electrónico"
+        required>
+
+    <label for="usuario">Nombre de usuario</label>
+    <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Ingrese su usuario"
+        required>
+
+    <label for="password">Contraseña</label>
+    <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Ingrese su contraseña"
+        required>
+
+    <label for="confirmar_password">Confirmar contraseña</label>
+    <input
+        type="password"
+        id="confirmar_password"
+        name="confirmar_password"
+        placeholder="Confirme su contraseña"
+        required>
+
+    <label for="tipo_usuario">Tipo de usuario</label>
+    <select
+        id="tipo_usuario"
+        name="tipo_usuario"
+        required>
+
+        <option value="">Seleccione...</option>
+        <option value="cliente">Cliente</option>
+        <option value="administrador">Administrador</option>
+
+    </select>
+
+    <button
+        type="submit"
+        class="btnRegistro">
+
+        Registrarse
+
+    </button>
+
+</form>
+```
+
+        Registrarse
+
+        </button>
+
+    </form>
+
+    <button
+    class="volver"
+    onclick="mostrarSeccion('login')">
+
+    Volver al Login
+
+    </button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+            RECUPERAR CONTRASEÑA
+=================================================== -->
+
+<section id="recuperar" style="display:none;">
+
+<div class="recuperar">
+
+    <img src="img/logo.png" class="logo">
+
+    <h1>Shop Sports</h1>
+
+    <h2>Recuperar contraseña</h2>
+
+    <p class="mensaje">
+
+        Ingresa el correo electrónico con el que te registraste.
+
+    </p>
+
+    <form>
+
+        <label>Correo electrónico</label>
+
+        <input type="email" required>
+
+        <button
+        type="button"
+        class="btnEnviar">
+
+        Enviar enlace
+
+        </button>
+
+    </form>
+
+    <button
+    class="volver"
+    onclick="mostrarSeccion('login')">
+
+    Volver al Login
+
+    </button>
+
+</div>
+
+</section>
+<!-- ==================================================
+                        INICIO
+=================================================== -->
+
+<section id="inicio" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
+            <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+            <li><a href="#" onclick="mostrarSeccion('perfil')">Mi Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<div class="banner">
+
+    <h2>¡Bienvenido a Shop Sports!</h2>
+
+    <p>Encuentra los mejores artículos deportivos al mejor precio.</p>
+
+</div>
+
+<div class="busqueda">
+
+    <input type="text" placeholder="Buscar productos...">
+
+    <button>Buscar</button>
+
+</div>
+
+<div class="categorias">
+
+    <div class="categoria">Fútbol</div>
+
+    <div class="categoria">Baloncesto</div>
+
+    <div class="categoria">Running</div>
+
+    <div class="categoria">Gimnasio</div>
+
+</div>
+
+<div class="productos">
+
+    <div class="producto">
+
+        <img src="img/balon.jpg" alt="Balón">
+
+        <h3>Balón Profesional</h3>
+
+        <p>$120.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+    <div class="producto">
+
+        <img src="img/guayos.jpg" alt="Guayos">
+
+        <h3>Guayos Nike</h3>
+
+        <p>$350.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+    <div class="producto">
+
+        <img src="img/mancuernas.jpg" alt="Mancuernas">
+
+        <h3>Mancuernas</h3>
+
+        <p>$180.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!-- ==================================================
+                    PRODUCTOS
+=================================================== -->
+
+<section id="productos" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+            <li><a href="#" onclick="mostrarSeccion('perfil')">Mi Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<h2 class="titulo-catalogo">
+
+Catálogo de Productos
+
+</h2>
+
+<div class="catalogo">
+
+    <div class="producto">
+
+        <img src="img/balon.jpg">
+
+        <h3>Balón Profesional</h3>
+
+        <p>$120.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+    <div class="producto">
+
+        <img src="img/guayos.jpg">
+
+        <h3>Guayos Nike</h3>
+
+        <p>$350.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+    <div class="producto">
+
+        <img src="img/mancuernas.jpg">
+
+        <h3>Mancuernas</h3>
+
+        <p>$180.000</p>
+
+        <button onclick="mostrarSeccion('carrito')">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!-- ==================================================
+                    CARRITO
+=================================================== -->
+
+<section id="carrito" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
+            <li><a href="#" onclick="mostrarSeccion('perfil')">Mi Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="carrito">
+
+    <h2>Carrito de Compras</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Producto</th>
+
+            <th>Cantidad</th>
+
+            <th>Precio</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Balón Profesional</td>
+
+            <td>1</td>
+
+            <td>$120.000</td>
+
+        </tr>
+
+    </table>
+
+    <div class="botones-carrito">
+
+        <button class="vaciar">
+
+            Vaciar carrito
+
+        </button>
+
+        <button
+        class="comprar"
+        onclick="mostrarSeccion('pago')">
+
+            Finalizar compra
+
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+<!--====================================================
+                        PAGO
+=====================================================-->
+
+<section id="pago" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
+            <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+            <li><a href="#" onclick="mostrarSeccion('perfil')">Mi Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="pago">
+
+    <h2>Finalizar Compra</h2>
+
+    <form>
+
+        <label>Nombre del titular</label>
+        <input type="text" placeholder="Ingrese el nombre del titular" required>
+
+        <label>Número de tarjeta</label>
+        <input type="text" placeholder="1234 5678 9012 3456" required>
+
+        <label>Fecha de vencimiento</label>
+        <input type="month" required>
+
+        <label>CVV</label>
+        <input type="password" maxlength="3" placeholder="123" required>
+
+        <label>Dirección de envío</label>
+        <textarea rows="4" placeholder="Ingrese la dirección de entrega" required></textarea>
+
+        <label>Método de pago</label>
+
+        <select required>
+
+            <option value="">Seleccione una opción</option>
+            <option>Tarjeta Crédito</option>
+            <option>Tarjeta Débito</option>
+            <option>PSE</option>
+            <option>Nequi</option>
+            <option>Daviplata</option>
+
+        </select>
+
+        <button
+        type="button"
+        class="btnPagar"
+        onclick="mostrarSeccion('inicio')">
+
+            Confirmar Pago
+
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!--====================================================
+                    PERFIL
+=====================================================-->
+
+<section id="perfil" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
+            <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="perfil">
+
+    <h2>Mi Perfil</h2>
+
+    <img src="img/perfil.png" class="fotoPerfil">
+
+    <label>Nombre</label>
+    <input type="text" value="Juan Pérez">
+
+    <label>Correo electrónico</label>
+    <input type="email" value="juan@email.com">
+
+    <label>Contraseña</label>
+    <input type="password" value="123456">
+
+    <button class="btnActualizar">
+
+        Actualizar información
+
+    </button>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!--====================================================
+                PANEL DEL VENDEDOR
+=====================================================-->
+
+<section id="vendedor" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="panel-vendedor">
+
+    <h2>Panel del Vendedor</h2>
+
+    <p>Bienvenido. Selecciona una opción para administrar la tienda.</p>
+
+    <div class="opciones-vendedor">
+
+        <div class="opcion">
+
+            <h3>📦 Productos</h3>
+
+            <p>Agregar, editar y eliminar productos.</p>
+
+            <button onclick="mostrarSeccion('productos')">
+
+                Gestionar
+
+            </button>
+
+        </div>
+
+        <div class="opcion">
+
+            <h3>📋 Inventario</h3>
+
+            <p>Consultar existencias disponibles.</p>
+
+            <button onclick="mostrarSeccion('inventario')">
+
+                Abrir
+
+            </button>
+
+        </div>
+
+        <div class="opcion">
+
+            <h3>🛒 Pedidos</h3>
+
+            <p>Consultar pedidos realizados.</p>
+
+            <button onclick="mostrarSeccion('pedidos')">
+
+                Ver pedidos
+
+            </button>
+
+        </div>
+
+        <div class="opcion">
+
+            <h3>📈 Historial</h3>
+
+            <p>Consultar ventas realizadas.</p>
+
+            <button onclick="mostrarSeccion('historial')">
+
+                Ver historial
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+<!--====================================================
+                    INVENTARIO
+=====================================================-->
+
+<section id="inventario" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('vendedor')">Panel</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="inventario">
+
+    <h2>Inventario</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Producto</th>
+            <th>Stock</th>
+            <th>Precio</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Balón Profesional</td>
+            <td>15</td>
+            <td>$120.000</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Guayos Nike</td>
+            <td>8</td>
+            <td>$350.000</td>
+
+        </tr>
+
+    </table>
+
+    <button class="agregarProducto">
+
+        Agregar Producto
+
+    </button>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!--====================================================
+                    PEDIDOS
+=====================================================-->
+
+<section id="pedidos" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('vendedor')">Panel</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="pedidos">
+
+    <h2>Pedidos</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Pedido</th>
+            <th>Cliente</th>
+            <th>Estado</th>
+
+        </tr>
+
+        <tr>
+
+            <td>#001</td>
+            <td>Juan Pérez</td>
+            <td>Pendiente</td>
+
+        </tr>
+
+    </table>
+
+    <button class="actualizarEstado">
+
+        Actualizar Estado
+
+    </button>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<!--====================================================
+                HISTORIAL DE VENTAS
+=====================================================-->
+
+<section id="historial" style="display:none;">
+
+<header>
+
+    <h1>🏆 Shop Sports</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#" onclick="mostrarSeccion('vendedor')">Panel</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="historial">
+
+    <h2>Historial de Ventas</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Total</th>
+
+        </tr>
+
+        <tr>
+
+            <td>05/07/2026</td>
+            <td>Balón Profesional</td>
+            <td>$120.000</td>
+
+        </tr>
+
+    </table>
+
+    <button class="btnReporte">
+
+        Generar Reporte
+
+    </button>
+
+</section>
+
+<footer>
+
+<p>© 2026 Shop Sports - Todos los derechos reservados.</p>
+
+</footer>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
