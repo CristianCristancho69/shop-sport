@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Servicio Web - Inicio de sesión</title>
+
+<link rel="stylesheet" href="estilo.css">
+
+</head><body><main class="contenedor">
+
+    <section class="tarjeta">
+
+        <div class="encabezado">
+            <h1>Servicio Web</h1>
+            <p>Inicio de sesión</p>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <form action="login.php" method="POST">
+
+            <!-- Campo de usuario -->
+            <div class="campo">
+                <label for="usuario">Usuario</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Ingrese su usuario"
+                    required>
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="campo">
+                <label for="password">Contraseña</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Ingrese su contraseña"
+                    required>
+            </div>
+
+            <!-- Botón para iniciar sesión -->
+            <button type="submit">Iniciar sesión</button>
+
+        </form>
+
+        <!-- Enlace de registro -->
+        <p class="registro">
+            ¿No tienes una cuenta?
+            <a href="registro.html">Registrarse</a>
+        </p>
+
+    </section>
+
+</main>
+
+</body></html>
